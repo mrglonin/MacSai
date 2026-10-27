@@ -315,9 +315,10 @@ Do not take our word for it. Both the source and the running process are checkab
 rg -n 'URLSession|NSURLConnection' Sources --glob '*.swift'
 ```
 
-You should only ever see two network paths, both optional and both read-only:
+The optional network paths are update checks and downloads:
 
-- `Sources/MacCleanKit/UpdateChecker.swift`: the optional Mac Sai update check (turn it off in Settings)
+- `Sources/MacClean/Services/SelfUpdateController.swift`: Sparkle checks the HTTPS feed embedded in the signed app and downloads signed release notes and update archives. Automatic checks and automatic installation have separate settings; system profiling is disabled. See [update setup](docs/IN_APP_UPDATES.md).
+- `Sources/MacCleanKit/UpdateChecker.swift`: Homebrew checks and the release-page fallback for builds without a configured signed feed
 - `Sources/MacClean/Modules/Updater/UpdaterModule.swift`: the user-driven check of *other apps'* Sparkle feeds when you open the Updater
 
 There is no analytics, crash reporter, or tracker SDK anywhere in the codebase.
@@ -337,16 +338,16 @@ The source and the signed binary are different artifacts, so the strongest check
 ```bash
 APP="/Applications/Mac Sai.app/Contents/MacOS/MacClean"
 
-# Networking classes the binary imports (only URLSession appears):
+# Networking classes the main executable imports:
 nm -u "$APP" | grep -iE 'URLSession|NWConnection|CFSocket' | sort -u
 
-# Every URL compiled into the binary (only the two update endpoints are fetched):
+# URLs compiled into the main executable (also inspect the embedded feed):
 strings -a "$APP" | grep -iE 'https?://' | sort -u
 ```
 
-Expected: the only networking class is `_OBJC_CLASS_$_NSURLSession`, and the only fetch endpoints are `api.github.com/repos/iliyami/MacSai/releases/latest` and `formulae.brew.sh/api/cask/mac-sai.json`. The other `github.com/iliyami/MacSai` links and the `buymeacoffee.com/iliyami` support link just open in your browser. No trackers, no analytics hosts, nothing else. Re-run it after any update; it always describes the exact build you are running.
+The fallback checker uses `api.github.com/repos/iliyami/MacSai/releases/latest` and Homebrew uses `formulae.brew.sh/api/cask/mac-sai.json`. Sparkle is a dynamically linked framework, so inspecting only the main executable does not describe all network activity. Inspect `SUFeedURL` in the app's `Contents/Info.plist` and the signed feed's release-note/archive URLs too. No scan results or file lists are sent to the update service, and Sparkle system profiling is disabled. Browser links remain user initiated.
 
-Note: on a non-sandboxed Developer ID app like this one, network access is not gated by an entitlement, so this symbol and string inspection, not `codesign --entitlements`, is the real check. The same guard runs in CI on every change ([`scripts/check-network-surface.sh`](scripts/check-network-surface.sh)).
+Note: on a non-sandboxed Developer ID app like this one, network access is not gated by an entitlement. Symbol/string inspection is a useful smoke check, not a complete audit of all linked code or future network behavior. The same guard runs in CI on every change ([`scripts/check-network-surface.sh`](scripts/check-network-surface.sh)).
 
 ---
 

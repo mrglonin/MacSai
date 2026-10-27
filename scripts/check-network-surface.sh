@@ -2,9 +2,10 @@
 # check-network-surface.sh
 #
 # Verifies the SHIPPED BINARY's network surface matches what the README claims:
-# the only networking class it imports is URLSession, the only URLs compiled in
-# are the two disclosed update endpoints, and there is no tracker, analytics, or
-# crash-reporter SDK anywhere in it.
+# the main executable uses disclosed update endpoints and has no known tracker
+# markers. Sparkle is a dynamically linked update framework: its feed, notes and
+# archives are additional disclosed network paths. This check is a smoke test,
+# not a proof that every dependency has no other network behavior.
 #
 # The point (raised by a reviewer): the repo and the installed binary are two
 # different artifacts, so grepping the source proves nothing about the build on
@@ -78,4 +79,13 @@ if [ "$fail" -ne 0 ]; then
     echo "::error::Network-surface check FAILED (see above)."
     exit 1
 fi
-echo "Network-surface check passed: only URLSession, only the disclosed endpoints."
+echo "Network-surface smoke check passed for the main executable."
+echo "Sparkle additionally downloads the configured appcast, release notes and signed archives; system profiling is disabled."
+if [[ "$BIN" == */Contents/MacOS/* ]]; then
+    INFO="${BIN%/MacOS/*}/Info.plist"
+    if /usr/libexec/PlistBuddy -c 'Print :SUFeedURL' "$INFO" >/dev/null 2>&1; then
+        /usr/libexec/PlistBuddy -c 'Print :SUFeedURL' "$INFO"
+        PROFILE=$(/usr/libexec/PlistBuddy -c 'Print :SUEnableSystemProfiling' "$INFO")
+        [[ "$PROFILE" == "false" ]] || { echo "ERROR: Sparkle system profiling must remain disabled"; exit 1; }
+    fi
+fi
