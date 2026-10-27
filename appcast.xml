@@ -4,31 +4,26 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Mac Sai</title>
         <item>
-            <title>1.26.0-preview.4</title>
-            <pubDate>Tue, 27 Oct 2026 17:16:16 +0500</pubDate>
-            <sparkle:version>1.25.84</sparkle:version>
-            <sparkle:shortVersionString>1.26.0-preview.4</sparkle:shortVersionString>
+            <title>1.26.0-preview.5</title>
+            <pubDate>Tue, 27 Oct 2026 17:34:17 +0500</pubDate>
+            <sparkle:version>1.25.85</sparkle:version>
+            <sparkle:shortVersionString>1.26.0-preview.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.26.0-preview.4
+            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.26.0-preview.5
 
-Обновление установленной тестовой сборки.
+Финальная проверка интерфейса тестовой сборки.
 
-- Добавлены «Выбрать всё», «Выбрать безопасные» и «Снять всё» в Умном сканировании и Системном мусоре.
-- Исправлена форма кнопки «Очистить» и размещение выбранного объёма, включая узкое окно и русский язык.
-- После очистки показывается фактически обработанный объём. Строки результата больше не используют устаревшие размеры сканирования.
-- Исправлена ошибочная блокировка системных путей /private/var и /var, вызывавшая «Недействительное имя файла».
-- Исправлена проверка перемещённых каталогов на macOS 15; восстановление из Корзины проверено на тестовых файлах.
-- Сохранены исправление температуры аккумулятора, подписанные обновления внутри приложения и пакетная очистка.
+- Кнопка разрешений больше не дублируется при переходе между Умным сканированием и Системным мусором и не остаётся на других экранах.
+- Сохранены кнопки «Выбрать всё», «Выбрать безопасные» и «Снять всё», исправленная форма действия «Очистить» и корректные счётчики.
+- Включены исправления температуры аккумулятора, системных путей при очистке, восстановления из Корзины и подписанные обновления внутри приложения.
 
-По умолчанию отмечаются безопасные категории согласно правилам проекта. Очистка Корзины и изменение приложений требуют явного выбора и подтверждения.
-
-Это тестовая сборка для проверки предложенных автору изменений. Она подписана локальным сертификатом и не проходила нотарификацию Apple. Архив обновления проверяется по подписи Ed25519.
+Это тестовая сборка предложенных автору изменений. Она использует отдельный канал обновлений и локальный сертификат; нотарификация Apple не выполнялась.
 ]]></description>
-            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.26.0-4/MacSai-1.26.0-preview.4.zip" length="9774162" type="application/octet-stream" sparkle:edSignature="tHO47QHKOvfEX+IQca59PWDr2wtapKc6MIJl2SIaCAU4Bwyf81ar7pSMIkP6uGKi+La+Q7U1Gyp5tPoE6JoeDw=="></enclosure>
+            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.26.0-5/MacSai-1.26.0-preview.5.zip" length="9774467" type="application/octet-stream" sparkle:edSignature="P6SKbToxEPvsVZwWAACd9kwLJUUl6wU3AubvMOzCIwakrKUKFTF0FSDiaLrss3d9Izpz3WNNBmEi0YXxkp3FCA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: oYJGtoCm/vUu6c9VMPyrbUc6PCXBRDB3TEZfVktiWGbwOz7Z9F8coR7wWFga1/BXk6xg8p5hKEISPrkX9xOLBw==
-length: 3192
+edSignature: rxXiF+jvX6bYOmGKwI+w8hLd6b+AaZKTud2wL23ljml7iHcEHT+Rsro4W6fHamwt3+KZTxjW9NOn46QoN7PxBw==
+length: 2404
 -->
