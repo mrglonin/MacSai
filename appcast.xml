@@ -4,13 +4,13 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Mac Sai</title>
         <item>
-            <title>1.26.0-preview.2</title>
-            <pubDate>Tue, 27 Oct 2026 16:45:06 +0500</pubDate>
-            <sparkle:version>1.25.82</sparkle:version>
-            <sparkle:shortVersionString>1.26.0-preview.2</sparkle:shortVersionString>
+            <title>1.26.0-preview.3</title>
+            <pubDate>Tue, 27 Oct 2026 16:55:32 +0500</pubDate>
+            <sparkle:version>1.25.83</sparkle:version>
+            <sparkle:shortVersionString>1.26.0-preview.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.26.0-preview.2
+            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.26.0-preview.3
 
 Тестовая сборка для проверки изменений, предложенных автору MacSai.
 
@@ -22,10 +22,10 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 Сборка подписана локальным сертификатом для тестирования; нотарификацию Apple не проходила. Обновления проверяются по цифровой подписи Ed25519.
 ]]></description>
-            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.26.0-2/MacSai-1.26.0-preview.2.zip" length="9753331" type="application/octet-stream" sparkle:edSignature="cd8TcX8QtHXCmqoNCRAgLEBnEPqWA50dFpaOKZm5cS8B+QlVfRxMJEsCTjdyDD7AtRyt/rjclqtYayE7mDWTDQ=="></enclosure>
+            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.26.0-3/MacSai-1.26.0-preview.3.zip" length="9753334" type="application/octet-stream" sparkle:edSignature="FVZ/4ekUAtUYLKUnqt9wYPQXPLDKgxNvJ2gEivY+zl7wlAAOdqzRI6I7iKIGMkTeVD9wYgH636esTZnlJNQVBg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: QQjyAaedSUPhmsM3L1kcmOQOXyAFDGytdjZgTAPmctoCRZVke3mpvx85gT2ee1jO2FiUv+xteXZXm1HWVdSjAA==
+edSignature: 4VQYA1/UOYkHuhEzZLbR82wntpLKsFIussqbGorwKfHXUWyDpwOAe3JGc7J+Qi2+A1Rt3dFKwMEA/Y6aJn1jBQ==
 length: 2258
 -->
