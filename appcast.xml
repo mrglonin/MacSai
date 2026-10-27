@@ -1,13 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
-  <channel>
-    <title>Mac Sai PR Preview Updates</title>
-    <link>https://github.com/mrglonin/MacSai</link>
-    <description>Signed preview channel for testing proposed MacSai changes.</description>
-    <language>ru</language>
-  </channel>
+    <channel>
+        <title>Mac Sai</title>
+        <item>
+            <title>1.26.0-preview.2</title>
+            <pubDate>Tue, 27 Oct 2026 16:45:06 +0500</pubDate>
+            <sparkle:version>1.25.82</sparkle:version>
+            <sparkle:shortVersionString>1.26.0-preview.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.26.0-preview.2
+
+Тестовая сборка для проверки изменений, предложенных автору MacSai.
+
+- Исправлено чтение температуры аккумулятора на macOS 27.
+- Добавлено обновление внутри программы: список изменений, загрузка, установка и перезапуск.
+- Очистка перемещает файлы в Корзину пакетами и сообщает о частичных ошибках.
+- Добавлена проверка разрешений перед очисткой.
+- Собственный журнал очистки исключён из удаляемого мусора.
+
+Сборка подписана локальным сертификатом для тестирования; нотарификацию Apple не проходила. Обновления проверяются по цифровой подписи Ed25519.
+]]></description>
+            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.26.0-2/MacSai-1.26.0-preview.2.zip" length="9753331" type="application/octet-stream" sparkle:edSignature="cd8TcX8QtHXCmqoNCRAgLEBnEPqWA50dFpaOKZm5cS8B+QlVfRxMJEsCTjdyDD7AtRyt/rjclqtYayE7mDWTDQ=="></enclosure>
+        </item>
+    </channel>
 </rss><!-- sparkle-signatures:
-edSignature: w5tx+GwDhhAIXwN2k4q1qnrogzFhMQbq/+wUilZVqtirzdtwDRflDK4Vnwq7qwdu7Y/sjzKjSBY0uDuyvInlAg==
-length: 627
+edSignature: QQjyAaedSUPhmsM3L1kcmOQOXyAFDGytdjZgTAPmctoCRZVke3mpvx85gT2ee1jO2FiUv+xteXZXm1HWVdSjAA==
+length: 2258
 -->
