@@ -311,9 +311,10 @@ Mac Sai подписан идентификатором Apple **Developer ID** �
 rg -n 'URLSession|NSURLConnection' Sources --glob '*.swift'
 ```
 
-Вы должны увидеть ровно два сетевых пути, оба необязательные и только на чтение:
+Необязательные сетевые обращения связаны с проверкой и загрузкой обновлений:
 
-- `Sources/MacCleanKit/UpdateChecker.swift`: необязательная проверка обновлений Mac Sai (отключается в настройках)
+- `Sources/MacClean/Services/SelfUpdateController.swift`: Sparkle проверяет HTTPS-ленту, указанную в подписанном приложении, и загружает подписанные описания изменений и архивы обновлений. Проверка и автоматическая установка настраиваются отдельно; отправка системного профиля отключена. См. [настройку обновлений](docs/IN_APP_UPDATES.md).
+- `Sources/MacCleanKit/UpdateChecker.swift`: проверка Homebrew и переход к странице релиза в сборках без настроенной подписанной ленты
 - `Sources/MacClean/Modules/Updater/UpdaterModule.swift`: запускаемая пользователем проверка лент Sparkle *других приложений* при открытии модуля «Обновления»
 
 В коде нет никакой аналитики, отчётов о сбоях или трекеров.
@@ -333,16 +334,16 @@ lsof -i -P -n | grep -i 'MacClean\|Mac Sai\|MacSai' || echo "no network sockets"
 ```bash
 APP="/Applications/Mac Sai.app/Contents/MacOS/MacClean"
 
-# Сетевые классы, которые импортирует бинарник (появляется только URLSession):
+# Сетевые классы, которые импортирует основной бинарник:
 nm -u "$APP" | grep -iE 'URLSession|NWConnection|CFSocket' | sort -u
 
-# Все URL, вшитые в бинарник (запрашиваются только две конечные точки обновления):
+# URL в основном бинарнике (также проверьте адрес встроенной ленты):
 strings -a "$APP" | grep -iE 'https?://' | sort -u
 ```
 
-Ожидание: в списке будет только сетевой класс `_OBJC_CLASS_$_NSURLSession`, а запрашиваются лишь два адреса: `api.github.com/repos/iliyami/MacSai/releases/latest` и `formulae.brew.sh/api/cask/mac-sai.json`. Остальные ссылки `github.com/iliyami/MacSai` и ссылка поддержки `buymeacoffee.com/iliyami` просто открываются в браузере. Никаких трекеров, аналитических доменов и ничего лишнего. Запустите снова после любого обновления: результат всегда описывает именно ту сборку, что у вас запущена.
+Проверка старого типа обращается к `api.github.com/repos/iliyami/MacSai/releases/latest`, а Homebrew — к `formulae.brew.sh/api/cask/mac-sai.json`. Sparkle подключён как отдельный framework: список строк основного бинарника не описывает весь сетевой обмен. Дополнительно проверьте `SUFeedURL` в `Contents/Info.plist` и адреса описаний/архивов в подписанной ленте. Результаты сканирования и списки файлов не отправляются сервису обновлений; отправка системного профиля Sparkle отключена.
 
-Примечание: для приложения с Developer ID без песочницы, как это, доступ к сети не ограничивается entitlement, поэтому настоящая проверка выполняется анализом символов и строк, а не командой `codesign --entitlements`. Та же проверка выполняется в CI при каждом изменении ([`scripts/check-network-surface.sh`](scripts/check-network-surface.sh)).
+Примечание: для приложения с Developer ID без песочницы, как это, доступ к сети не ограничивается entitlement. Анализ символов и строк полезен как базовая проверка, но не заменяет аудит всего подключённого кода и сетевого поведения. Та же проверка выполняется в CI при каждом изменении ([`scripts/check-network-surface.sh`](scripts/check-network-surface.sh)).
 
 ---
 
