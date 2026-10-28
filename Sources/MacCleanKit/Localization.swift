@@ -254,6 +254,14 @@ public enum L10n {
     /// back to the Simplified string, which is still readable Chinese. Native
     /// review is welcome to refine wording.
     private static let traditionalChineseFallbacks: [String: String] = [
+        "自动下载并安装更新": "自動下載並安裝更新",
+        "更新会在退出时安装，也可以选择立即重启应用。": "更新會在結束時安裝，也可以選擇立即重新啟動應用程式。",
+        "更新频道：": "更新頻道：",
+        "重试安装": "重試安裝",
+        "此版本尚未配置应用内安装。": "此版本尚未設定應用程式內安裝。",
+        "清理完成后将检查更新。": "清理完成後將檢查更新。",
+        "请关闭菜单栏监视器后重试更新。": "請結束選單列監視器後重試更新。",
+        "已取消": "已取消",
         "无法开启登录时启动：{message}": "無法開啟登入時啟動：{message}",
         "无法关闭登录时启动：{message}": "無法關閉登入時啟動：{message}",
         // Post-clean support card and Settings link
@@ -854,6 +862,14 @@ public enum L10n {
 
     
     private static let frenchFallbacks: [String: String] = [
+        "自动下载并安装更新": "Télécharger et installer les mises à jour automatiquement",
+        "更新会在退出时安装，也可以选择立即重启应用。": "Les mises à jour s’installent à la fermeture. Vous pouvez aussi redémarrer l’application maintenant.",
+        "更新频道：": "Canal de mise à jour : ",
+        "重试安装": "Réessayer l’installation",
+        "此版本尚未配置应用内安装。": "L’installation des mises à jour dans l’application n’est pas configurée pour cette version.",
+        "清理完成后将检查更新。": "Les mises à jour seront recherchées après le nettoyage.",
+        "请关闭菜单栏监视器后重试更新。": "Quittez le moniteur de la barre des menus, puis réessayez la mise à jour.",
+        "已取消": "Annulé",
         "无法开启登录时启动：{message}": "Impossible d'activer le lancement au démarrage : {message}",
         "无法关闭登录时启动：{message}": "Impossible de désactiver le lancement au démarrage : {message}",
         // Post-clean support card and Settings link
@@ -1478,6 +1494,14 @@ public enum L10n {
     ]
 
     private static let germanFallbacks: [String: String] = [
+        "自动下载并安装更新": "Updates automatisch laden und installieren",
+        "更新会在退出时安装，也可以选择立即重启应用。": "Updates werden beim Beenden installiert. Du kannst die App auch sofort neu starten.",
+        "更新频道：": "Update-Kanal: ",
+        "重试安装": "Installation erneut versuchen",
+        "此版本尚未配置应用内安装。": "Die Installation von Updates in der App ist in diesem Build nicht eingerichtet.",
+        "清理完成后将检查更新。": "Nach Abschluss der Bereinigung wird nach Updates gesucht.",
+        "请关闭菜单栏监视器后重试更新。": "Beende den Menüleistenmonitor und versuche das Update erneut.",
+        "已取消": "Abgebrochen",
         "无法开启登录时启动：{message}": "„Beim Anmelden starten“ konnte nicht aktiviert werden: {message}",
         "无法关闭登录时启动：{message}": "„Beim Anmelden starten“ konnte nicht deaktiviert werden: {message}",
         // Post-clean support card and Settings link
@@ -2135,6 +2159,14 @@ public enum L10n {
     ]
 
     private static let italianFallbacks: [String: String] = [
+        "自动下载并安装更新": "Scarica e installa automaticamente gli aggiornamenti",
+        "更新会在退出时安装，也可以选择立即重启应用。": "Gli aggiornamenti vengono installati alla chiusura. Puoi anche riavviare subito l’app.",
+        "更新频道：": "Canale di aggiornamento: ",
+        "重试安装": "Riprova l’installazione",
+        "此版本尚未配置应用内安装。": "L’installazione degli aggiornamenti nell’app non è configurata per questa versione.",
+        "清理完成后将检查更新。": "Gli aggiornamenti verranno cercati al termine della pulizia.",
+        "请关闭菜单栏监视器后重试更新。": "Chiudi il monitor della barra dei menu e riprova l’aggiornamento.",
+        "已取消": "Annullato",
         "无法开启登录时启动：{message}": "Impossibile attivare l'apertura al login: {message}",
         "无法关闭登录时启动：{message}": "Impossibile disattivare l'apertura al login: {message}",
         "查找并移除系统缓存、日志、\n语言文件和其他垃圾": "Trova e rimuovi cache di sistema, registri,\nfile di localizzazione e altri file non necessari",
