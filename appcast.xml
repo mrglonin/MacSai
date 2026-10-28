@@ -4,26 +4,32 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Mac Sai</title>
         <item>
-            <title>1.26.0-preview.5</title>
-            <pubDate>Tue, 27 Oct 2026 17:34:17 +0500</pubDate>
-            <sparkle:version>1.25.85</sparkle:version>
-            <sparkle:shortVersionString>1.26.0-preview.5</sparkle:shortVersionString>
+            <title>1.28.0-preview.6</title>
+            <pubDate>Wed, 28 Oct 2026 13:35:31 +0500</pubDate>
+            <sparkle:version>1.25.86</sparkle:version>
+            <sparkle:shortVersionString>1.28.0-preview.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.26.0-preview.5
+            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.28.0-preview.6
 
-Финальная проверка интерфейса тестовой сборки.
+Обновление тестовой сборки с доработками по ревью автора Mac Sai.
 
-- Кнопка разрешений больше не дублируется при переходе между Умным сканированием и Системным мусором и не остаётся на других экранах.
-- Сохранены кнопки «Выбрать всё», «Выбрать безопасные» и «Снять всё», исправленная форма действия «Очистить» и корректные счётчики.
-- Включены исправления температуры аккумулятора, системных путей при очистке, восстановления из Корзины и подписанные обновления внутри приложения.
+- «Выбрать всё» учитывает ограничения категорий и результатов. Возможные угрозы и community-reported файлы выбираются только по одному, включая случай повторения файла в другой категории.
+- Сохранён первоначальный выбор сканера, в том числе подтверждённые XProtect угрозы. «Выбрать безопасные» остаётся отдельным действием.
+- Исправлено русское склонение количества объектов. Новые строки переведены на немецкий, французский, итальянский и традиционный китайский.
+- Выбранные символические ссылки показываются как пропущенные. Проверки подмены файла и перенаправления пути сохранены.
+- Исправлены отмена ожидающих операций и повторный запуск подготовки обновления при Command-Q.
+- Проверка сетевых ограничений охватывает все семь бинарных компонентов приложения. Обновлены сведения о сетевых обращениях.
+- Включены изменения официальной базы 1.27.1 с исправлением температуры аккумулятора.
 
-Это тестовая сборка предложенных автору изменений. Она использует отдельный канал обновлений и локальный сертификат; нотарификация Apple не выполнялась.
+Тестирование общей версии: 1266 Swift-тестов, 3 пропуска, 0 ошибок; 34 Python-проверки подписей, конфигурации, публикации и сетевого аудита.
+
+Это отдельная тестовая сборка предложенных автору изменений. Используются локальный сертификат и собственный подписанный тестовый канал. Нотарификация Apple не выполнялась; официальный выпуск контролирует автор проекта.
 ]]></description>
-            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.26.0-5/MacSai-1.26.0-preview.5.zip" length="9774467" type="application/octet-stream" sparkle:edSignature="P6SKbToxEPvsVZwWAACd9kwLJUUl6wU3AubvMOzCIwakrKUKFTF0FSDiaLrss3d9Izpz3WNNBmEi0YXxkp3FCA=="></enclosure>
+            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.28.0-6/MacSai-1.28.0-preview.6.zip" length="9947678" type="application/octet-stream" sparkle:edSignature="SDbbsW/MnsCYOke8xqdq7v9X9beeCuyl1JfwNIvZmjnGDf+lnn06DpnCXmneoFLYYUB9zgy0T11n0z37Z73MBA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: rxXiF+jvX6bYOmGKwI+w8hLd6b+AaZKTud2wL23ljml7iHcEHT+Rsro4W6fHamwt3+KZTxjW9NOn46QoN7PxBw==
-length: 2404
+edSignature: piWotVWr/6+JR+02LnBUGv/IEAcKhWMZJJUo137djfuJ9A+iv+sI1hyk0+r825bGPl8lr9fizJkBRjcU9LxtDg==
+length: 3641
 -->
