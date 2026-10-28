@@ -254,6 +254,7 @@ public enum L10n {
     /// back to the Simplified string, which is still readable Chinese. Native
     /// review is welcome to refine wording.
     private static let traditionalChineseFallbacks: [String: String] = [
+        "请逐项检查并选择可能的威胁和社区报告的文件。此复选框只能取消该类别中已选中的项目。": "請逐項檢查並選擇可能的威脅和社群回報的檔案。此核取方塊只能取消該類別中已選取的項目。",
         // Cleanup selection controls and confirmation copy.
         "全选": "全選",
         "取消全选": "取消全選",
@@ -865,6 +866,7 @@ public enum L10n {
 
     
     private static let frenchFallbacks: [String: String] = [
+        "请逐项检查并选择可能的威胁和社区报告的文件。此复选框只能取消该类别中已选中的项目。": "Vérifiez et sélectionnez individuellement les menaces potentielles et les fichiers signalés par la communauté. Cette case permet uniquement de désélectionner les éléments de cette catégorie.",
         // Cleanup selection controls and confirmation copy.
         "全选": "Tout sélectionner",
         "取消全选": "Tout désélectionner",
@@ -874,7 +876,7 @@ public enum L10n {
         "选中的文件会移到废纸篓，如有需要仍可恢复。": "Les fichiers sélectionnés seront placés dans la corbeille et pourront être restaurés si nécessaire.",
         "废纸篓中选中的项目将永久删除，无法恢复。": "Les éléments sélectionnés dans la corbeille seront supprimés définitivement et ne pourront pas être restaurés.",
         "应用中未使用的架构将被移除。恢复可能需要重新安装应用。": "Les architectures inutilisées seront retirées des applications. Leur restauration peut nécessiter la réinstallation des applications.",
-        "已处理": "traité",
+        "已处理": "traités",
 
         "无法开启登录时启动：{message}": "Impossible d'activer le lancement au démarrage : {message}",
         "无法关闭登录时启动：{message}": "Impossible de désactiver le lancement au démarrage : {message}",
@@ -1500,6 +1502,7 @@ public enum L10n {
     ]
 
     private static let germanFallbacks: [String: String] = [
+        "请逐项检查并选择可能的威胁和社区报告的文件。此复选框只能取消该类别中已选中的项目。": "Prüfe und wähle mögliche Bedrohungen und von der Community gemeldete Dateien einzeln aus. Dieses Kontrollkästchen kann nur die Auswahl in dieser Kategorie aufheben.",
         // Cleanup selection controls and confirmation copy.
         "全选": "Alle auswählen",
         "取消全选": "Auswahl aufheben",
@@ -2168,6 +2171,7 @@ public enum L10n {
     ]
 
     private static let italianFallbacks: [String: String] = [
+        "请逐项检查并选择可能的威胁和社区报告的文件。此复选框只能取消该类别中已选中的项目。": "Verifica e seleziona singolarmente le possibili minacce e i file segnalati dalla community. Questa casella può solo deselezionare gli elementi di questa categoria.",
         // Cleanup selection controls and confirmation copy.
         "全选": "Seleziona tutto",
         "取消全选": "Deseleziona tutto",
