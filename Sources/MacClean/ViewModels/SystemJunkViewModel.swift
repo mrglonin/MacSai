@@ -50,9 +50,7 @@ final class SystemJunkViewModel {
     }
 
     private func recomputeSelectedSize() {
-        var total: UInt64 = 0
-        for url in selectedItems { total += sizeByURL[url] ?? 0 }
-        totalSelectedSize = total
+        totalSelectedSize = CleanupSelectionPolicy.selectedSize(selectedItems, sizesByURL: sizeByURL)
     }
 
     var selectedCount: Int {
@@ -60,7 +58,7 @@ final class SystemJunkViewModel {
     }
 
     var totalFileCount: Int {
-        results.reduce(0) { $0 + $1.fileCount }
+        sizeByURL.count
     }
 
     func startScan() {
@@ -105,11 +103,7 @@ final class SystemJunkViewModel {
             // Build the auto-selection locally and assign once, so the
             // selectedItems observer (and its size recompute) fires a single
             // time instead of once per inserted URL.
-            var selection = selectedItems
-            for result in scanResults where result.autoSelect {
-                for item in result.items { selection.insert(item.url) }
-            }
-            selectedItems = selection
+            selectedItems = CleanupSelectionPolicy.initialURLs(in: scanResults)
 
             let elapsed = Date().timeIntervalSince(scanStart)
             if elapsed < 2.0 {
