@@ -254,6 +254,17 @@ public enum L10n {
     /// back to the Simplified string, which is still readable Chinese. Native
     /// review is welcome to refine wording.
     private static let traditionalChineseFallbacks: [String: String] = [
+        // Cleanup selection controls and confirmation copy.
+        "全选": "全選",
+        "取消全选": "取消全選",
+        "选择安全项目": "選擇安全項目",
+        "选择所有允许自动勾选的项目。需要手动检查的类别和可能的威胁保持不选。": "選擇所有允許自動勾選的項目。需要手動檢查的類別和可能的威脅保持不選。",
+        "仅保留安全的临时文件、缓存、日志和残留文件。不选择个人数据、废纸篓或应用修改。": "僅保留安全的暫存檔案、快取、記錄和殘留檔案。不選擇個人資料、垃圾桶或應用程式修改。",
+        "选中的文件会移到废纸篓，如有需要仍可恢复。": "選取的檔案會移到垃圾桶，如有需要仍可還原。",
+        "废纸篓中选中的项目将永久删除，无法恢复。": "垃圾桶中選取的項目將永久刪除，無法還原。",
+        "应用中未使用的架构将被移除。恢复可能需要重新安装应用。": "應用程式中未使用的架構將被移除。還原可能需要重新安裝應用程式。",
+        "已处理": "已處理",
+
         "无法开启登录时启动：{message}": "無法開啟登入時啟動：{message}",
         "无法关闭登录时启动：{message}": "無法關閉登入時啟動：{message}",
         // Post-clean support card and Settings link
@@ -854,6 +865,17 @@ public enum L10n {
 
     
     private static let frenchFallbacks: [String: String] = [
+        // Cleanup selection controls and confirmation copy.
+        "全选": "Tout sélectionner",
+        "取消全选": "Tout désélectionner",
+        "选择安全项目": "Sélectionner les éléments sûrs",
+        "选择所有允许自动勾选的项目。需要手动检查的类别和可能的威胁保持不选。": "Sélectionne tous les éléments autorisés pour la sélection automatique. Les catégories à vérifier manuellement et les menaces potentielles restent décochées.",
+        "仅保留安全的临时文件、缓存、日志和残留文件。不选择个人数据、废纸篓或应用修改。": "Conserve uniquement les fichiers temporaires sûrs, caches, journaux et résidus sélectionnés. Exclut les données personnelles, la corbeille et les modifications des applications.",
+        "选中的文件会移到废纸篓，如有需要仍可恢复。": "Les fichiers sélectionnés seront placés dans la corbeille et pourront être restaurés si nécessaire.",
+        "废纸篓中选中的项目将永久删除，无法恢复。": "Les éléments sélectionnés dans la corbeille seront supprimés définitivement et ne pourront pas être restaurés.",
+        "应用中未使用的架构将被移除。恢复可能需要重新安装应用。": "Les architectures inutilisées seront retirées des applications. Leur restauration peut nécessiter la réinstallation des applications.",
+        "已处理": "traité",
+
         "无法开启登录时启动：{message}": "Impossible d'activer le lancement au démarrage : {message}",
         "无法关闭登录时启动：{message}": "Impossible de désactiver le lancement au démarrage : {message}",
         // Post-clean support card and Settings link
@@ -1478,6 +1500,17 @@ public enum L10n {
     ]
 
     private static let germanFallbacks: [String: String] = [
+        // Cleanup selection controls and confirmation copy.
+        "全选": "Alle auswählen",
+        "取消全选": "Auswahl aufheben",
+        "选择安全项目": "Sichere Objekte auswählen",
+        "选择所有允许自动勾选的项目。需要手动检查的类别和可能的威胁保持不选。": "Wählt alle für die automatische Auswahl freigegebenen Objekte aus. Kategorien zur manuellen Prüfung und mögliche Bedrohungen bleiben abgewählt.",
+        "仅保留安全的临时文件、缓存、日志和残留文件。不选择个人数据、废纸篓或应用修改。": "Behält nur sichere temporäre Dateien, Caches, Protokolle und Reste ausgewählt. Persönliche Daten, Papierkorb und App-Änderungen werden ausgeschlossen.",
+        "选中的文件会移到废纸篓，如有需要仍可恢复。": "Ausgewählte Dateien werden in den Papierkorb verschoben und können bei Bedarf wiederhergestellt werden.",
+        "废纸篓中选中的项目将永久删除，无法恢复。": "Ausgewählte Objekte im Papierkorb werden dauerhaft gelöscht und können nicht wiederhergestellt werden.",
+        "应用中未使用的架构将被移除。恢复可能需要重新安装应用。": "Nicht verwendete Architekturen werden aus Apps entfernt. Zur Wiederherstellung müssen die Apps möglicherweise neu installiert werden.",
+        "已处理": "verarbeitet",
+
         "无法开启登录时启动：{message}": "„Beim Anmelden starten“ konnte nicht aktiviert werden: {message}",
         "无法关闭登录时启动：{message}": "„Beim Anmelden starten“ konnte nicht deaktiviert werden: {message}",
         // Post-clean support card and Settings link
@@ -2135,6 +2168,17 @@ public enum L10n {
     ]
 
     private static let italianFallbacks: [String: String] = [
+        // Cleanup selection controls and confirmation copy.
+        "全选": "Seleziona tutto",
+        "取消全选": "Deseleziona tutto",
+        "选择安全项目": "Seleziona elementi sicuri",
+        "选择所有允许自动勾选的项目。需要手动检查的类别和可能的威胁保持不选。": "Seleziona tutti gli elementi idonei alla selezione automatica. Le categorie da verificare manualmente e le possibili minacce restano deselezionate.",
+        "仅保留安全的临时文件、缓存、日志和残留文件。不选择个人数据、废纸篓或应用修改。": "Mantiene selezionati solo file temporanei sicuri, cache, registri e residui. Esclude dati personali, Cestino e modifiche alle app.",
+        "选中的文件会移到废纸篓，如有需要仍可恢复。": "I file selezionati verranno spostati nel Cestino e potranno essere ripristinati se necessario.",
+        "废纸篓中选中的项目将永久删除，无法恢复。": "Gli elementi selezionati già nel Cestino verranno eliminati definitivamente e non potranno essere ripristinati.",
+        "应用中未使用的架构将被移除。恢复可能需要重新安装应用。": "Le architetture inutilizzate verranno rimosse dalle app. Per ripristinarle potrebbe essere necessario reinstallare le app.",
+        "已处理": "elaborati",
+
         "无法开启登录时启动：{message}": "Impossibile attivare l'apertura al login: {message}",
         "无法关闭登录时启动：{message}": "Impossibile disattivare l'apertura al login: {message}",
         "查找并移除系统缓存、日志、\n语言文件和其他垃圾": "Trova e rimuovi cache di sistema, registri,\nfile di localizzazione e altri file non necessari",
