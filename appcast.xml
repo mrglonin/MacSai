@@ -4,13 +4,13 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Mac Sai</title>
         <item>
-            <title>1.29.0-preview.8</title>
-            <pubDate>Thu, 29 Oct 2026 10:25:21 +0500</pubDate>
-            <sparkle:version>1.25.88</sparkle:version>
-            <sparkle:shortVersionString>1.29.0-preview.8</sparkle:shortVersionString>
+            <title>1.29.0-preview.9</title>
+            <pubDate>Thu, 29 Oct 2026 10:28:59 +0500</pubDate>
+            <sparkle:version>1.25.89</sparkle:version>
+            <sparkle:shortVersionString>1.29.0-preview.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.29.0-preview.8
+            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.29.0-preview.9
 
 Доработка обновлений после повторного ревью автора.
 
@@ -26,10 +26,10 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 Это отдельная тестовая сборка PR #255 на официальной базе 1.28.0. Используется локальный сертификат и собственный подписанный канал. Официальный выпуск и ключи контролирует автор проекта; нотарификация Apple этой тестовой сборки не выполнялась.
 ]]></description>
-            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.29.0-8/MacSai-1.29.0-preview.8.zip" length="10003377" type="application/octet-stream" sparkle:edSignature="4TAS25KodkOx5KcF/2WIITdGWYqVuVpvcBHt/nsdDs9uaw6HtojOLzoJGqA2dOIbhbkNTbUKo7gUYdgq4zbHDQ=="></enclosure>
+            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.29.0-9/MacSai-1.29.0-preview.9.zip" length="10003364" type="application/octet-stream" sparkle:edSignature="2E4K1CGQ2Z+adzLZ7S9Z5AX59srVEhvB06VCKaFMgounNd8asIHB8IJa0V+7E8Bbtdamx84gN0GS56yxj3/rCg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: XSoB/1ikbpvR3EaDQwWHcwo2L4XKMHzzOAFFrFItnaJsDEHhG0EkRkXDT9WVzzHxbawjuiCVLoUCaqnb6je3Cw==
+edSignature: 8y5PyXA7up1NiQThc4bnQ2pDl0Oh5E+gTHj05C5MTUuCIvN6xM/66/rcedYhWT9r/9cwajyTPgaUkEs4UE48Ag==
 length: 3653
 -->
