@@ -4,34 +4,32 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Mac Sai</title>
         <item>
-            <title>1.28.0-preview.7</title>
-            <pubDate>Wed, 28 Oct 2026 13:59:19 +0500</pubDate>
-            <sparkle:version>1.25.87</sparkle:version>
-            <sparkle:shortVersionString>1.28.0-preview.7</sparkle:shortVersionString>
+            <title>1.29.0-preview.8</title>
+            <pubDate>Thu, 29 Oct 2026 10:25:21 +0500</pubDate>
+            <sparkle:version>1.25.88</sparkle:version>
+            <sparkle:shortVersionString>1.29.0-preview.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.28.0-preview.7
+            <description sparkle:format="markdown"><![CDATA[# Mac Sai 1.29.0-preview.8
 
-Обновление тестовой сборки с доработками по ревью автора Mac Sai.
+Доработка обновлений после повторного ревью автора.
 
-Выбор языка теперь открывается компактным меню. Все восемь вариантов, включая системный, доступны и в узком окне; текущий язык виден в настройках. Мгновенное переключение главного окна и виджета сохранено.
+- Без подготовленного обновления обычный выход из приложения работает как раньше.
+- Если обновление готово, а операция ещё выполняется, можно дождаться завершения и выйти либо остаться в приложении. Повторный Command-Q больше не обходит ожидание.
+- Исправлены отмена и повторная установка; ошибка последующей проверки сети не отменяет ожидающую установку.
+- Исправлены переводы подготовки обновления, пункта меню и даты последней проверки.
+- Проверки обновлений по умолчанию выполняются раз в сутки. Они передают версии приложения и Sparkle в User-Agent и отключаются в настройках. Существующие пользовательские настройки сохраняются.
 
-- «Выбрать всё» учитывает ограничения категорий и результатов. Возможные угрозы и community-reported файлы выбираются только по одному, включая случай повторения файла в другой категории.
-- Сохранён первоначальный выбор сканера, в том числе подтверждённые XProtect угрозы. «Выбрать безопасные» остаётся отдельным действием.
-- Исправлено русское склонение количества объектов. Новые строки переведены на немецкий, французский, итальянский и традиционный китайский.
-- Выбранные символические ссылки показываются как пропущенные. Проверки подмены файла и перенаправления пути сохранены.
-- Исправлены отмена ожидающих операций и повторный запуск подготовки обновления при Command-Q.
-- Проверка сетевых ограничений охватывает все семь бинарных компонентов приложения. Обновлены сведения о сетевых обращениях.
-- Включены изменения официальной базы 1.27.1 с исправлением температуры аккумулятора.
+При ожидании установки системная команда выхода из учётной записи, перезапуска или выключения может быть отменена. После завершения Mac Sai повторите системную команду вручную.
 
-Тестирование общей версии: 1266 Swift-тестов, 3 пропуска, 0 ошибок; 34 Python-проверки подписей, конфигурации, публикации и сетевого аудита.
+Проверки исходного кода: 1285 Swift-тестов, 3 пропуска, 0 ошибок; 42 Python-проверки прошли. Сценарии ожидания и отмены проверены в отдельном AppKit-окне с имитированными операциями, без очистки пользовательских файлов.
 
-Это отдельная тестовая сборка предложенных автору изменений. Используются локальный сертификат и собственный подписанный тестовый канал. Нотарификация Apple не выполнялась; официальный выпуск контролирует автор проекта.
+Это отдельная тестовая сборка PR #255 на официальной базе 1.28.0. Используется локальный сертификат и собственный подписанный канал. Официальный выпуск и ключи контролирует автор проекта; нотарификация Apple этой тестовой сборки не выполнялась.
 ]]></description>
-            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.28.0-7/MacSai-1.28.0-preview.7.zip" length="9948616" type="application/octet-stream" sparkle:edSignature="jN0C/zl/M2aJwzT+vyRa18EPv59SUACAlcIMbl2fUUs13/6T+JsM3Taftu+t0DvMYSYFUzzH1gyCmSGLsyKEDw=="></enclosure>
+            <enclosure url="https://github.com/mrglonin/MacSai/releases/download/preview-1.29.0-8/MacSai-1.29.0-preview.8.zip" length="10003377" type="application/octet-stream" sparkle:edSignature="4TAS25KodkOx5KcF/2WIITdGWYqVuVpvcBHt/nsdDs9uaw6HtojOLzoJGqA2dOIbhbkNTbUKo7gUYdgq4zbHDQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: wcrIei6ARssKZPNhIwtKVRLk3ZtpzLsdWMOSo/gAr1ijW+A06Z1uLKO4J6TXx5oNqIgIUva8ISeNdqaYe2zpCw==
-length: 4020
+edSignature: XSoB/1ikbpvR3EaDQwWHcwo2L4XKMHzzOAFFrFItnaJsDEHhG0EkRkXDT9WVzzHxbawjuiCVLoUCaqnb6je3Cw==
+length: 3653
 -->
